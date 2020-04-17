@@ -1,0 +1,16 @@
+export default {
+  bg: 'Добро утро!',
+  de: 'Guten Morgen!',
+  en: 'Good morning!',
+  es: '¡Buen día!',
+  fr: 'Bonjour!',
+  it: 'Buongiorno!',
+  ja: 'おはようございます！',
+  ko: '좋은 아침이야!',
+  la: 'Salve!',
+  nl: 'Goedemorgen!',
+  no: 'God morgen!',
+  pt: 'Bom dia!',
+  ru: 'Доброе утро',
+  zh: '早安！',
+}
