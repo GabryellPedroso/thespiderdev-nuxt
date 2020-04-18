@@ -56,6 +56,7 @@ export default {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 #HomePage {
