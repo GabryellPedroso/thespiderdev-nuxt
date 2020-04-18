@@ -21,7 +21,7 @@ module.exports = {
       author: 'theSpiderDev',
       theme_color: '#000',
       lang: process.browser ? navigator.language.split('-')[0] : 'en',
-      ogTitle: 'theSpiderDev Nuxt Server',
+      ogTitle: 'theSpiderDev · Nuxt',
       ogSiteName: 'thespiderdev-nuxt',
       ogHost: 'https://thespiderdev-nuxt.herokuapp.com',
       twitterSite: 'https://twitter.com/theSpiderDev'
