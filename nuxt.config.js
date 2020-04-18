@@ -9,18 +9,28 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { name: 'theme-color', content: '#000' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' }
     ]
   },
+  pwa: {
+    meta: {
+      author: 'theSpiderDev',
+      theme_color: '#000',
+      lang: process.browser ? navigator.language.split('-')[0] : 'en',
+      ogTitle: 'theSpiderDev Nuxt Server',
+      ogSiteName: 'thespiderdev-nuxt',
+      ogHost: 'https://thespiderdev-nuxt.herokuapp.com',
+      twitterSite: 'https://twitter.com/theSpiderDev'
+    }
+  },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
   /*
   ** Global CSS
   */
