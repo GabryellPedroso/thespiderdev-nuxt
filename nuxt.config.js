@@ -12,7 +12,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' }
     ]
   },
   /*
@@ -38,6 +39,25 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    ['cookie-universal-nuxt', { alias: 'cookie' }],
+    ['nuxt-i18n', {
+      locales: [
+        {
+          name: 'Português',
+          code: 'pt',
+          iso: 'pt-BR',
+          file: 'pt.js'
+        },
+        {
+          name: 'English',
+          code: 'en',
+          iso: 'en-US',
+          file: 'en.js'
+        },
+      ],
+      langDir: 'lang/',
+      defaultLocale: 'en',
+    }],
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage

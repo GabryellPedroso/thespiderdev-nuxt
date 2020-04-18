@@ -1,47 +1,90 @@
 <template lang="pug">
-  #HomePage
-    h1 Hello World!
+  #HomePage(:style="{ backgroundColor: checked ? '#F25C05' : '#1C2C40' }")
+    toggle(
+      id="toggle"
+      toggleColorOn="#F25C05"
+      toggleContainerColorOn="#F2CB05"
+      toggleColorOff="#1C2C40"
+      toggleContainerColorOff="#1D7373"
+      :padding="8"
+      :label="checked ? 'Good morning!' : 'zZz'"
+      :labelColor="checked ? '#F2CB05' : '#1D7373'"
+      fontSize="0.9rem"
+      labelPosition="bottom"
+      labelMargin="10px"
+      :checked="checked"
+      @change="(newValue) => checked = newValue"
+      :size="60")
+
+    footer(:style="{ color: checked ? '#F2CB05' : '#1D7373' }")
+      a(href="https://bit.ly/2RLYNhv" target="_blank")
+        i.fab.fa-github
+      a(href="https://bit.ly/2RL254x" target="_blank")
+        i.fab.fa-twitter
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+// import greetings from '@/lang'
+import Toggle from '@/components/Toggle'
 
 export default {
+  name: 'HomePage',
   components: {
-    Logo
+    Toggle
+  },
+  data() {
+    return {
+      checked: false
+    }
   }
 }
 </script>
 
 <style lang="scss">
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin: 0;
+  padding: 0;
+}
+
 #HomePage {
-  margin: 0 auto;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  
+  width: 100vw;
+  height: 100vh;
+  
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-}
+  color: #2c3e50;
+  transition: ease-in-out 0.2s;
 
-h1 {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 60px 0;
+    transition: inherit;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+    a {
+      margin: 0 15px;
+      color: inherit;
+      transition: inherit;
+      
+      .fa-github,
+      .fa-twitter {
+        font-size: 1.75rem;
+        color: inherit;
+        transition: inherit;
+      }
+    }
+  }
 }
 </style>
