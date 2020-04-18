@@ -7,7 +7,7 @@
       toggleColorOff="#1C2C40"
       toggleContainerColorOff="#1D7373"
       :padding="8"
-      :label="checked ? 'Good morning!' : 'zZz'"
+      :label="checked ? _greeting : 'zZz'"
       :labelColor="checked ? '#F2CB05' : '#1D7373'"
       fontSize="0.9rem"
       labelPosition="bottom"
@@ -24,8 +24,14 @@
 </template>
 
 <script>
-// import greetings from '@/lang'
+import greetings from '@/lang'
 import Toggle from '@/components/Toggle'
+
+let greeting = ''
+if (process.browser) {
+  const browserLang = navigator.language.split('-')[0]
+  greeting = greetings[browserLang]
+}
 
 export default {
   name: 'HomePage',
@@ -35,6 +41,11 @@ export default {
   data() {
     return {
       checked: false
+    }
+  },
+  computed: {
+    _greeting() {
+      return greeting || 'Good morning!'
     }
   }
 }
