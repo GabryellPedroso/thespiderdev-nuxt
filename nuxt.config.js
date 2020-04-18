@@ -1,6 +1,7 @@
 
 module.exports = {
   mode: 'universal',
+  title: 'Vue Toggle Component',
   /*
   ** Headers of the page
   */
@@ -21,7 +22,7 @@ module.exports = {
       author: 'theSpiderDev',
       theme_color: '#000',
       lang: process.browser ? navigator.language.split('-')[0] : 'en',
-      ogTitle: 'theSpiderDev · Nuxt',
+      ogTitle: 'Vue Toggle Component',
       ogSiteName: 'thespiderdev-nuxt',
       ogHost: 'https://thespiderdev-nuxt.herokuapp.com',
       twitterSite: 'https://twitter.com/theSpiderDev'
