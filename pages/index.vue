@@ -22,7 +22,6 @@
       a(href="https://bit.ly/2RL254x" target="_blank")
         i.fab.fa-twitter
 </template>
-
 <script>
 import greetings from '@/lang'
 import Toggle from '@/components/Toggle'
