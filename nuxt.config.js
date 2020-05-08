@@ -85,6 +85,8 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    https: true,
+    baseURL: 'https://thespiderdev-api.herokuapp.com',
   },
   /*
   ** Build configuration
